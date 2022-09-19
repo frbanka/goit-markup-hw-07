@@ -20,14 +20,16 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
+        <div class="header__flex">
           <a class="link-normal" href="./index.html"
             ><span class="web-title">Web</span
             ><span class="web-title-black">Studio</span>
           </a>
-          <nav class="nav">
-            <ul class="nav-list">
-              <li><a class="link-normal" href="./index.html">Agencja</a></li>
+          <nav>
+            <ul class="header__navigation">
+              <li>
+                <a class="link-normal" href="./index.html">Agencja</a>
+              </li>
               <li>
                 <a class="link-normal link-current" href="./portfolio.html"
                   >Portfolio</a
@@ -36,17 +38,17 @@
               <li><a class="link-normal" href="#">Kontakt</a></li>
             </ul>
           </nav>
-          <ul class="contact-list">
-            <li class="contact-hover">
-              <svg class="icon-contacts" height="12px" width="16px">
+          <ul class="header__contacts">
+            <li class="header__contacts-flex">
+              <svg class="header__contacts-icons" height="12px" width="16px">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               <a class="contacts" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="contact-hover">
-              <svg class="icon-contacts" height="16px" width="10px">
+            <li class="header__contacts-flex">
+              <svg class="header__contacts-icons" height="16px" width="10px">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               <a class="contacts" href="tel:+48111111111">+48 111 111 111</a>
@@ -290,58 +292,58 @@
         </ul>
       </div>
     </section>
-    <footer class="foot">
-      <section class="section foot-padd">
-        <div class="container">
-          <div class="foot-flex">
-            <div class="foot-item">
-              <a class="link-normal" href="./index.html"
-                ><span class="web-title">Web</span
-                ><span class="web-title-white">Studio</span></a
-              >
-              <address class="address-padd">
-                <span class="address">m. Warszawa, Aleje Jerozolimskie 21</span
-                ><br />
-                <span class="contacts mail">info@example.com</span><br />
-                <span class="contacts">+48 111 111 111</span><br />
-              </address>
+    <footer class="footer">
+      <section class="section footer__section">
+        <div class="container footer__container">
+          <div class="footer__item">
+            <a class="link-normal" href="./index.html"
+              ><span class="web-title">Web</span
+              ><span class="web-title-white">Studio</span></a
+            >
+            <address class="address-padd">
+              <span class="address">m. Warszawa, Aleje Jerozolimskie 21</span
+              ><br />
+              <span class="contacts mail">info@example.com</span><br />
+              <span class="contacts">+48 111 111 111</span><br />
+            </address>
+          </div>
+          <div class="footer__item">
+            <p>DOŁĄCZ DO NAS</p>
+            <div class="footer__icons">
+              <svg class="footer__social-icon" height="44px" width="44px">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+              <svg class="footer__social-icon" height="44px" width="44px">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+              <svg class="footer__social-icon" height="44px" width="44px">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+              <svg class="footer__social-icon" height="44px" width="44px">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
             </div>
-            <div class="foot-item">
-              <p>DOŁĄCZ DO NAS</p>
-              <div class="foot-item-icon">
-                <svg class="icon-socials" height="44px" width="44px">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-                <svg class="icon-socials" height="44px" width="44px">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-                <svg class="icon-socials" height="44px" width="44px">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-                <svg class="icon-socials" height="44px" width="44px">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="foot-subs">
-              <label class="footer-label">Zapisz się do newslettera</label>
-              <div class="foot-button">
-                <input
-                  type="email"
-                  name="subscription"
-                  class="input-post"
-                  placeholder="E-mail"
-                />
+          </div>
+          <div class="footer__item subscribe">
+            <label class="footer__subscribe-label"
+              >Zapisz się do newslettera</label
+            >
+            <div class="footer__subscribe-form">
+              <input
+                type="email"
+                name="subscription"
+                class="footer__input"
+                placeholder="E-mail"
+              />
 
-                <button type="submit" class="submit-button">
-                  <div class="submit-svg">
-                    Zapisz się
-                    <svg height="24" width="24">
-                      <use href="./images/icons.svg#icon-subsc"></use>
-                    </svg>
-                  </div>
-                </button>
-              </div>
+              <button type="submit" class="submit-button">
+                <div class="footer__button-items">
+                  Zapisz się
+                  <svg height="24" width="24" fill="white">
+                    <use href="./images/icons.svg#icon-subsc"></use>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ img {
   margin: 0px 24px 0px 24px;
 }
 
-.main-title {
+.banner__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
@@ -31,6 +31,9 @@ img {
   color: #ffffff;
   align-items: center;
   text-align: center;
+  justify-content: center;
+  max-width: 696px;
+  max-height: 120px;
 }
 .feature-title {
   font-weight: 700;
@@ -153,7 +156,7 @@ img {
   transition: 250ms;
 }
 
-.mail {
+.footer__mail {
   text-decoration-line: underline;
 }
 
@@ -191,32 +194,26 @@ img {
   transition: 250ms;
 }
 
-.button-head {
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  text-align: center;
-  align-items: center;
-  transition-property: color, background-color;
-  transition: 250ms;
-}
-
-.button-head:hover {
+.submit-button:hover {
   background-color: #ffffff;
   color: #000000;
   transition-property: color, background-color;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-head:focus {
+.submit-button:hover svg {
+  fill: black;
+  transition: 250ms;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-button:focus svg {
+  fill: black;
+  transition: 250ms;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-button:focus {
   background-color: #ffffff;
   color: #000000;
   transition: color 250ms, background-color 250ms;
@@ -252,7 +249,7 @@ img {
   width: 100%;
   height: 600px;
 }
-.foot {
+.footer {
   background: #2f303a;
   max-width: 1600px;
   margin: auto;
@@ -279,8 +276,7 @@ img {
 }
 /* flexbox main styles */
 /* portolio header */
-.header-container {
-  width: 1200px;
+.header__flex {
   height: 80px;
   display: flex;
   align-items: center;
@@ -288,13 +284,13 @@ img {
   gap: 93px;
 }
 
-.nav-list {
+.header__navigation {
   list-style: none;
   display: flex;
   gap: 46px;
 }
 
-.contact-list {
+.header__contacts {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -303,7 +299,7 @@ img {
   margin-right: 0px;
   margin-left: auto;
 }
-.contact-hover {
+.header__contacts-flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,25 +307,25 @@ img {
 .contact-list:hover {
   cursor: pointer;
 }
-.contact-hover:hover .icon-contacts {
+.header__contacts-flex:hover .header__contacts-icons {
   fill: #2196f3;
   transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-hover:focus .icon-contacts {
+.header__contacts-flex:focus .header__contacts-icons {
   fill: #2196f3;
   transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-hover:hover .contacts {
+.header__contacts-flex:hover .contacts {
   color: #2196f3;
   transition-property: color;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-hover:focus .contacts {
+.header__contacts-flex:focus .contacts {
   color: #2196f3;
   transition-property: color;
   transition: 250ms;
@@ -382,46 +378,39 @@ img {
 .address-padd span {
   margin: 9px 0px 9px 0px;
 }
-.foot-padd {
+.footer__section {
   padding: 60px 0px 60px 0px;
 }
-.foot-flex {
+.footer__container {
   display: flex;
   flex-direction: row;
   gap: 70px;
 }
-.foot-item {
+.footer__item {
   display: flex;
   flex-direction: column;
 }
-.foot-item-icon {
+.footer__icons {
   display: flex;
   flex-direction: row;
   gap: 10px;
   padding: 20px 0px 0px 0px;
 }
-.foot-item p {
+.footer__item p {
   color: #ffffff;
   font-size: 14px;
 }
 
 /*  footer */
 /* agencja banner */
-.banner-flex {
+.banner__flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   padding: 94px 0px 0px 0px;
 }
-.ban-tit-items {
-  justify-content: center;
-  max-width: 696px;
-  max-height: 120px;
-}
-.ban-tit-button {
-  justify-content: center;
-}
+
 /* agencja banner */
 /* agencja czym sie zajmujemy */
 .about-section {
@@ -462,24 +451,24 @@ img {
 
 /* icons svg  styles */
 
-.icon-contacts {
+.header__contacts-icons {
   margin-left: 0px;
   margin-right: 10px;
   fill: #757575;
 }
-.icon-socials {
+.footer__social-icon {
   fill: #ffffff1a;
   transition-property: fill;
   transition: 250ms;
 }
-.icon-socials:focus {
+.footer__social-icon:focus {
   fill: #2196f3;
   cursor: pointer;
   transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-socials:hover {
+.footer__social-icon:hover {
   fill: #2196f3;
   cursor: pointer;
   transition-property: fill;
@@ -657,7 +646,7 @@ figure .fig > figcaption {
   transition: opacity 300ms ease-in-out 0s;
 }
 
-.window {
+.modal__window {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -677,7 +666,7 @@ figure .fig > figcaption {
   transition-property: opacity;
   transition: 1s ease-in-out;
 }
-.button-close {
+.modal__button-close {
   position: absolute;
   background: none;
   border: none;
@@ -687,13 +676,13 @@ figure .fig > figcaption {
   right: 8px;
   top: 8px;
 }
-.form-flex {
+.modal__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.input-label {
+.modal__input-label {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -708,7 +697,7 @@ figure .fig > figcaption {
   gap: 4px;
 }
 
-.modal-input {
+.modal__input {
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -718,18 +707,18 @@ figure .fig > figcaption {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input:focus {
+.modal__input:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-label:focus-within svg {
+.modal__input-label:focus-within svg {
   fill: #2196f3;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comment-area {
+.modal__comment-area {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -747,13 +736,13 @@ figure .fig > figcaption {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comment-area:focus {
+.modal__comment-area:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-title {
+.modal__title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -764,7 +753,7 @@ figure .fig > figcaption {
   color: #212121;
   margin: 0px 0px 12px 0px;
 }
-.form-check {
+.modal__false-checkmark {
   position: absolute;
   padding: 0;
   border: 0;
@@ -772,7 +761,7 @@ figure .fig > figcaption {
   width: 1px;
   overflow: hidden;
 }
-.checkbox-modal {
+.modal__checkbox {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -787,7 +776,7 @@ figure .fig > figcaption {
   letter-spacing: 0.03em;
   color: #757575;
 }
-.checkmark {
+.modal__true-checkmark {
   display: inline-block;
   align-items: center;
   border: 2px solid #000000;
@@ -798,7 +787,7 @@ figure .fig > figcaption {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-check:checked + .checkmark {
+.modal__false-checkmark:checked + .modal__true-checkmark {
   background-image: url("../images/icon-check.svg");
   background-size: contain;
   background-origin: border-box;
@@ -807,7 +796,7 @@ figure .fig > figcaption {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button {
+.modal__button-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -828,21 +817,23 @@ figure .fig > figcaption {
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  transition-property: color, background-color;
+  transition: 250ms;
 }
-.form-icon {
+.modal__input-icon {
   position: absolute;
   fill: #212121;
   top: 50%;
   left: 15px;
 }
-.active-link {
+.modal__reglink {
   margin: 0;
   padding: 0;
   color: #2196f3;
 }
 /* modal window */
 /* footer sub */
-.footer-label {
+.footer__subscribe-label {
   display: block;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -852,17 +843,15 @@ figure .fig > figcaption {
   text-transform: uppercase;
   color: #ffffff;
 }
-.foot-subs {
-  display: flex;
-  flex-direction: column;
+.subscribe {
   gap: 5px;
 }
-.foot-button {
+.footer__subscribe-form {
   display: flex;
   flex-direction: row;
   gap: 12px;
 }
-.input-post {
+.footer__input {
   margin-right: 10px;
   width: 360px;
   height: 50px;
@@ -876,13 +865,14 @@ figure .fig > figcaption {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-post:focus {
+
+.footer__input:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.submit-svg {
+.footer__button-items {
   display: flex;
   flex-direction: row;
   align-items: center;
