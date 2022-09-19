@@ -29,7 +29,7 @@
             Imię<svg class="modal__input-icon" height="12px" width="12px">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
-            <input class="modal__input" type="text" name="name" />
+            <input class="modal__input" type="text" name="name" required />
           </label>
           <label class="modal__input-label">
             Telefon<svg class="modal__input-icon" height="13px" width="13px">
@@ -41,13 +41,14 @@
               name="phone"
               minlength="5"
               maxlength="12"
+              required
             />
           </label>
           <label class="modal__input-label">
             Email<svg class="modal__input-icon" height="15px" width="12px">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
-            <input class="modal__input" type="email" name="email" />
+            <input class="modal__input" type="email" name="email" required />
           </label>
           <label class="modal__input-label"
             >Komentarz
@@ -65,6 +66,7 @@
               value="regcheck"
               unchecked
               class="modal__false-checkmark"
+              required
             /><span class="modal__true-checkmark"></span>Oświadczam iż akceptuję
             <a href="#" class="modal__reglink">Regulamin</a>i<a
               href="#"
@@ -437,6 +439,7 @@
                 name="subscription"
                 class="footer__input"
                 placeholder="E-mail"
+                required
               />
 
               <button type="submit" class="submit-button">
