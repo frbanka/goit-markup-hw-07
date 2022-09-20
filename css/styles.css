@@ -6,7 +6,7 @@ body {
 img {
   display: block;
 }
-.image-title {
+.cards__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 200%;
@@ -14,7 +14,7 @@ img {
   margin: 20px 24px 0px 24px;
 }
 
-.image-text {
+.cards__description {
   font-size: 16px;
   line-height: 188%;
   letter-spacing: 0.03em;
@@ -22,7 +22,7 @@ img {
   margin: 0px 24px 0px 24px;
 }
 
-.banner__title {
+h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
@@ -52,7 +52,7 @@ img {
   color: #757575;
 }
 
-.subtitle {
+h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -61,7 +61,7 @@ img {
   padding: 0px 0px 50px 0px;
 }
 
-.name-title {
+.team__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -70,7 +70,7 @@ img {
   padding: 30px 0px 10px 0px;
 }
 
-.name-text {
+.team__description {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
@@ -78,7 +78,7 @@ img {
   text-align: center;
 }
 
-.web-title {
+.logo__title {
   font-family: "Raleway";
   text-decoration: none;
   font-weight: 700;
@@ -87,23 +87,15 @@ img {
   letter-spacing: 0.03em;
   color: #2196f3;
 }
-.web-title-black {
-  font-family: "Raleway";
-  font-size: 26px;
-  line-height: 36px;
-  letter-spacing: 0.03em;
+.title--black {
   color: #000000;
 }
 
-.web-title-white {
-  font-family: "Raleway";
-  font-size: 26px;
-  line-height: 36px;
-  letter-spacing: 0.03em;
+.title--white {
   color: #ffffff;
 }
 
-.link-normal {
+.link {
   text-decoration: none;
   color: #212121;
   font-family: "Roboto";
@@ -114,25 +106,22 @@ img {
   transition-property: color;
   transition: 250ms;
 }
+.logo {
+  text-decoration: none;
+}
 
-.link-normal:hover {
+.link:hover,
+.link:focus {
   color: #2196f3;
   transition-property: color;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-normal:focus {
-  color: #2196f3;
-  transition-property: color;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-current {
+.link--current {
   color: #2196f3;
   position: relative;
 }
-.link-current::after {
+.link--current::after {
   position: absolute;
   display: block;
   content: "";
@@ -160,7 +149,8 @@ img {
   text-decoration-line: underline;
 }
 
-.button-filter:hover {
+.portfolio__filter-button:hover,
+.portfolio__filter-button:focus {
   background-color: #2196f3;
   transition-property: background-color;
   transition: 250ms;
@@ -168,15 +158,8 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.button-filter:focus {
-  background-color: #2196f3;
-  transition-property: background-color;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button-filter {
+
+.portfolio__filter-button {
   padding: 0px 22px;
   cursor: pointer;
   height: 38px;
@@ -194,29 +177,19 @@ img {
   transition: 250ms;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:focus {
   background-color: #ffffff;
   color: #000000;
   transition-property: color, background-color;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.submit-button:hover svg {
-  fill: black;
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+.submit-button:hover svg,
 .submit-button:focus svg {
   fill: black;
   transition: 250ms;
   transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.submit-button:focus {
-  background-color: #ffffff;
-  color: #000000;
-  transition: color 250ms, background-color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -249,12 +222,7 @@ img {
   width: 100%;
   height: 600px;
 }
-.footer {
-  background: #2f303a;
-  max-width: 1600px;
-  margin: auto;
-  height: 225px;
-}
+
 /* html main styles */
 /* flexbox main styles */
 * {
@@ -268,8 +236,21 @@ img {
   height: 100%;
   margin: auto;
 }
+.header__container {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
 
 .section {
+  max-width: 1600px;
+  padding: 94px 0px 94px 0px;
+  margin: auto;
+}
+.team__section {
+  background: #f5f4fa;
+}
+.portfolio {
   max-width: 1600px;
   padding: 94px 0px 94px 0px;
   margin: auto;
@@ -307,24 +288,14 @@ img {
 .contact-list:hover {
   cursor: pointer;
 }
-.header__contacts-flex:hover .header__contacts-icons {
-  fill: #2196f3;
-  transition-property: fill;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+.header__contacts-flex:hover .header__contacts-icons,
 .header__contacts-flex:focus .header__contacts-icons {
   fill: #2196f3;
   transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__contacts-flex:hover .contacts {
-  color: #2196f3;
-  transition-property: color;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+.header__contacts-flex:hover .contacts,
 .header__contacts-flex:focus .contacts {
   color: #2196f3;
   transition-property: color;
@@ -334,7 +305,7 @@ img {
 
 /* portolio header */
 /* portolio photo cards */
-.photos-cards {
+.cards {
   display: flex;
   height: 100%;
   list-style: none;
@@ -343,14 +314,14 @@ img {
   gap: 30px;
 }
 
-.photos-li {
+.cards__item {
   position: relative;
   flex-basis: calc(100% / 3);
   border: 1px solid #eeeeee;
   border-width: 0px 1px 1px 1px;
   max-width: fit-content;
 }
-.photos-li:hover {
+.cards__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -362,7 +333,7 @@ img {
   width: 370px;
   height: 404px;
 }
-.flex-buttons {
+.portfolio__filter {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -378,13 +349,20 @@ img {
 .address-padd span {
   margin: 9px 0px 9px 0px;
 }
-.footer__section {
+.footer {
   padding: 60px 0px 60px 0px;
+  background: #2f303a;
+  max-width: 1600px;
+  margin: auto;
+  height: 225px;
 }
 .footer__container {
   display: flex;
   flex-direction: row;
   gap: 70px;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
 }
 .footer__item {
   display: flex;
@@ -396,7 +374,7 @@ img {
   gap: 10px;
   padding: 20px 0px 0px 0px;
 }
-.footer__item p {
+.footer__socials-title {
   color: #ffffff;
   font-size: 14px;
 }
@@ -422,25 +400,39 @@ img {
 .about-li {
   justify-content: space-between;
 }
-.work-section {
+.team {
   display: flex;
   list-style: none;
   flex-direction: column;
   align-items: center;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
 }
-.work-img {
+.work {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+.list {
   display: flex;
   list-style: none;
   flex-direction: row;
+}
+.list--gap {
   gap: 30px;
 }
-.work-subtitle {
+.team__title {
   list-style: none;
 }
 .client-title {
   padding: 94px 0px 0px 0px;
 }
-.work-img figure {
+.team__person {
   background: #ffffff;
   width: 270px;
   height: 428px;
@@ -461,42 +453,36 @@ img {
   transition-property: fill;
   transition: 250ms;
 }
-.footer__social-icon:focus {
+.icon-social {
+  transition-property: fill;
+  transition: 250ms;
+}
+.footer__icon-social {
+  fill: #ffffff1a;
+}
+
+.footer__icon-social:hover,
+.footer__icon-social:focus {
   fill: #2196f3;
   cursor: pointer;
   transition-property: fill;
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer__social-icon:hover {
-  fill: #2196f3;
-  cursor: pointer;
-  transition-property: fill;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icon-socials-team {
+
+.team__icon-social {
   border: none;
   border-radius: 50%;
   fill: #afb1b8;
-  transition-property: fill;
-  transition: 250ms;
 }
-.social-flex {
+.team__socials {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 0px 0px 0px;
 }
-.icon-socials-team:hover {
-  cursor: pointer;
-  background-color: #2196f3;
-  fill: #ffffff;
-  transition-property: fill, background-color;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icon-socials-team:focus {
+.team__icon-social:hover,
+.team__icon-social:focus {
   cursor: pointer;
   background-color: #2196f3;
   fill: #ffffff;
@@ -538,7 +524,8 @@ img {
   transition-property: fill;
   transition: 250ms;
 }
-.flex-client-items:hover {
+.flex-client-items:hover,
+.flex-client-items:focus {
   cursor: pointer;
   fill: #2196f3;
   border: 1px solid #2196f3;
@@ -548,14 +535,12 @@ img {
 }
 
 /* icons svg  styles */
-.what-we-do {
+.work__card {
   position: relative;
   width: 100%;
 }
-.what-we-do div {
+.work__overlay {
   position: absolute;
-}
-.what-we-do-box {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -565,7 +550,7 @@ img {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.wwd-title {
+.work__overlay-title {
   position: absolute;
   padding: 27px 0px 27px 0px;
   width: 100%;
@@ -580,7 +565,7 @@ img {
   color: #ffffff;
 }
 /* Overlay portfolio Start*/
-.overlay {
+.cards__overlay {
   position: absolute;
   display: flex;
   align-items: center;
@@ -597,13 +582,13 @@ img {
   transition-property: transform;
   transition: 200ms ease;
 }
-.box {
+.cards__image {
   position: relative;
   width: 370px;
-  height: 294px;
+  height: 400px;
   overflow: hidden;
 }
-.fig:hover .box .overlay {
+.cards__item:hover .cards__image .cards__overlay {
   transform: translatey(0);
   transition-property: transform;
   transition: 200ms ease;
@@ -611,7 +596,7 @@ img {
   visibility: visible;
 }
 
-.text-box {
+.cards__overlay-text {
   margin: 0px 0px 0px 24px;
   font-family: "Roboto";
   font-style: normal;
@@ -621,8 +606,8 @@ img {
   letter-spacing: 0.03em;
   color: #ffffff;
 }
-figure .fig > figcaption {
-  /*figcaption on porfolio page*/
+
+.cards__figcaption {
   position: absolute;
   background: #ffffff;
   z-index: 2;
@@ -630,6 +615,7 @@ figure .fig > figcaption {
   width: 370px;
   bottom: 0;
 }
+
 /* Overlay portfolio End*/
 /* modal window */
 .modal {
