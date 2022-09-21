@@ -29,14 +29,19 @@
             Imię<svg class="modal__input-icon" height="12px" width="12px">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
-            <input class="modal__input" type="text" name="name" required />
+            <input
+              class="input modal__input"
+              type="text"
+              name="name"
+              required
+            />
           </label>
           <label class="modal__input-label">
             Telefon<svg class="modal__input-icon" height="13px" width="13px">
               <use href="./images/icons.svg#icon-telephone"></use>
             </svg>
             <input
-              class="modal__input"
+              class="input modal__input"
               type="tel"
               name="phone"
               minlength="5"
@@ -48,7 +53,12 @@
             Email<svg class="modal__input-icon" height="15px" width="12px">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
-            <input class="modal__input" type="email" name="email" required />
+            <input
+              class="input modal__input"
+              type="email"
+              name="email"
+              required
+            />
           </label>
           <label class="modal__input-label"
             >Komentarz
@@ -75,17 +85,16 @@
             >
           </label>
           <div class="modal__button-container">
-            <button type="submit" class="submit-button">Wyślij</button>
+            <button type="submit" class="button submit-button">Wyślij</button>
           </div>
         </form>
       </div>
     </div>
     <header class="header">
-      <div class="header__container">
+      <div class="container">
         <div class="header__flex">
           <a class="logo" href="./index.html"
-            ><span class="logo__title">Web</span
-            ><span class="logo__title title--black">Studio</span>
+            ><span>Web</span><span class="logo--black">Studio</span>
           </a>
           <nav>
             <ul class="header__navigation">
@@ -121,7 +130,7 @@
       <div class="container">
         <div class="banner__flex">
           <h1>efektywne rozwiązania dla waszego biznesu</h1>
-          <button class="submit-button" type="button" data-modal-open>
+          <button class="button submit-button" type="button" data-modal-open>
             Zamów usługe
           </button>
         </div>
@@ -130,51 +139,51 @@
     <section class="section">
       <div class="container">
         <section>
-          <ul class="about-section">
-            <li class="about-li">
-              <div class="flex-about">
+          <ul class="features">
+            <li>
+              <div class="features__item">
                 <svg height="70px" width="70px">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h2 class="feature-title">LOREM IPSUM</h2>
-              <p class="feature-text">
+              <h2 class="feature__title">LOREM IPSUM</h2>
+              <p class="feature__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li class="about-li">
-              <div class="flex-about">
+            <li>
+              <div class="features__item">
                 <svg height="70px" width="70px">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h2 class="feature-title">LOREM IPSUM</h2>
-              <p class="feature-text">
+              <h2 class="feature__title">LOREM IPSUM</h2>
+              <p class="feature__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li class="about-li">
-              <div class="flex-about">
+            <li>
+              <div class="features__item">
                 <svg height="70px" width="70px">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h2 class="feature-title">LOREM IPSUM</h2>
-              <p class="feature-text">
+              <h2 class="feature__title">LOREM IPSUM</h2>
+              <p class="feature__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li class="about-li">
-              <div class="flex-about">
+            <li>
+              <div class="features__item">
                 <svg height="70px" width="70px">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h2 class="feature-title">LOREM IPSUM</h2>
-              <p class="feature-text">
+              <h2 class="feature__title">LOREM IPSUM</h2>
+              <p class="feature__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
@@ -186,7 +195,7 @@
     <section class="section">
       <div class="work">
         <h2>Czym się zajmujemy</h2>
-        <ul class="list list--gap">
+        <ul class="list">
           <li class="work__card">
             <img
               src="./images/programming.jpg"
@@ -195,7 +204,7 @@
               alt="programming"
             />
             <div class="work__overlay">
-              <p class="work__overlay-title">Aplikacje komputerowe</p>
+              <h2 class="work__title">APLIKACJE KOMPTUEROWE</h2>
             </div>
           </li>
           <li class="work__card">
@@ -206,7 +215,7 @@
               alt="mobile programming"
             />
             <div class="work__overlay">
-              <p class="work__overlay-title">Aplikacje mobilne</p>
+              <h2 class="work__title">APLIKACJE MOBILNE</h2>
             </div>
           </li>
           <li class="work__card">
@@ -217,7 +226,7 @@
               alt="style design"
             />
             <div class="work__overlay">
-              <p class="work__overlay-title">Rozwiązania graficzne</p>
+              <h2 class="work__title">ROZWIĄZANIA GRAFICZNE</h2>
             </div>
           </li>
         </ul>
@@ -226,7 +235,7 @@
     <section class="section team__section">
       <div class="team">
         <h2>Nasz zespół</h2>
-        <ul class="list list--gap">
+        <ul class="list">
           <li>
             <figure class="team__person">
               <img
@@ -408,36 +417,36 @@
     </section>
     <section>
       <div class="container">
-        <div class="client-title">
-          <h2 class="subtitle">Nasi klienci</h2>
+        <div class="clients">
+          <h2>Nasi klienci</h2>
         </div>
-        <div class="flex-clients">
-          <span class="flex-client-items">
+        <div class="clients__card">
+          <span class="clients__item">
             <svg width="41px" height="46.7px">
               <use href="./images/icons.svg#icon-client1"></use>
             </svg>
           </span>
-          <span class="flex-client-items">
+          <span class="clients__item">
             <svg width="40px" height="52">
               <use href="./images/icons.svg#icon-client2"></use>
             </svg>
           </span>
-          <span class="flex-client-items">
+          <span class="clients__item">
             <svg width="43.46px" height="41.18px">
               <use href="./images/icons.svg#icon-client3"></use>
             </svg>
           </span>
-          <span class="flex-client-items">
+          <span class="clients__item">
             <svg width="84.44px" height="40.62px">
               <use href="./images/icons.svg#icon-client4"></use>
             </svg>
           </span>
-          <span class="flex-client-items">
+          <span class="clients__item">
             <svg width="62.54px" height="45.43px">
               <use href="./images/icons.svg#icon-client5"></use>
             </svg>
           </span>
-          <span class="flex-client-items">
+          <span class="clients__item">
             <svg width="93.79px" height="43.93px">
               <use href="./images/icons.svg#icon-client6"></use>
             </svg>
@@ -447,16 +456,16 @@
     </section>
     <footer>
       <section class="footer">
-        <div class="footer__container">
+        <div class="container footer__container">
           <div class="footer__item">
             <a class="logo" href="./index.html"
-              ><span class="logo__title">Web</span
-              ><span class="logo__title title--white">Studio</span></a
+              ><span>Web</span><span class="logo--white">Studio</span></a
             >
-            <address class="address-padd">
-              <span class="address">m. Warszawa, Aleje Jerozolimskie 21</span
+            <address class="address">
+              <span class="address__place"
+                >m. Warszawa, Aleje Jerozolimskie 21</span
               ><br />
-              <span class="contacts mail">info@example.com</span><br />
+              <span class="contacts">info@example.com</span><br />
               <span class="contacts">+48 111 111 111</span><br />
             </address>
           </div>
@@ -499,14 +508,14 @@
             >
             <div class="footer__subscribe-form">
               <input
+                class="input footer__input"
                 type="email"
                 name="subscription"
-                class="footer__input"
                 placeholder="E-mail"
                 required
               />
 
-              <button type="submit" class="submit-button">
+              <button class="button submit-button" type="submit">
                 <div class="footer__button-items">
                   Zapisz się
                   <svg height="24" width="24" fill="white">
