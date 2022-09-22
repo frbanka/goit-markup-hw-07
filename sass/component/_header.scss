@@ -1,0 +1,58 @@
+.header {
+  max-width: 1600px;
+  margin: auto;
+  background: var(--white);
+  border: 1px solid #ececec;
+  border-width: 0px 0px 1px 0px;
+}
+.header__flex {
+  @include flex-nc;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  gap: 93px;
+}
+
+.header__navigation {
+  @include flex-nc;
+  @include flex-list;
+  gap: 46px;
+}
+
+.header__contacts {
+  @include flex-list;
+  @include flex;
+  gap: 50px;
+  margin-right: 0px;
+  margin-left: auto;
+}
+.header__contacts-flex {
+  @include flex;
+}
+.header__contacts-icons {
+  margin-left: 0px;
+  margin-right: 10px;
+  fill: var(--second-text-color);
+}
+.header__contacts-flex:hover .header__contacts-icons,
+.header__contacts-flex:focus .header__contacts-icons {
+  fill: var(--main-color);
+  transition-property: fill;
+  transition: 250ms;
+  transition-timing-function: var(--transition-timing);
+}
+.header__contacts-flex:hover .contacts,
+.header__contacts-flex:focus .contacts {
+  color: var(--main-color);
+  transition-property: color;
+  transition: 250ms;
+  transition-timing-function: var(--transition-timing);
+}
+
+.logo--black {
+  color: var(--black);
+}
+
+.logo--white {
+  color: var(--white);
+}
