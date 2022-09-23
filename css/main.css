@@ -40,22 +40,21 @@ img {
 }
 
 h1 {
-  font-weight: 900;
+  font-style: normal;
   font-size: 44px;
+  font-weight: 900;
   line-height: 60px;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--white);
-  align-items: center;
+  text-transform: uppercase;
   text-align: center;
-  justify-content: center;
   max-width: 696px;
-  max-height: 120px;
 }
 
 h2 {
-  font-weight: 700;
+  font-style: normal;
   font-size: 36px;
+  font-weight: 700;
   line-height: 42px;
   letter-spacing: 0.03em;
   color: var(--black);
@@ -64,17 +63,18 @@ h2 {
 }
 
 h3 {
+  font-style: normal;
   font-size: 16px;
+  font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.03em;
   text-align: center;
-  font-style: none;
-  font-weight: 400;
 }
 
 .section {
   max-width: 1600px;
-  padding: 94px 0px 94px 0px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   margin: auto;
 }
 
@@ -92,10 +92,13 @@ h3 {
 
 .button {
   cursor: pointer;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.03em;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
-  line-height: 30px;
   transition: 250ms;
 }
 
@@ -104,12 +107,13 @@ h3 {
   width: 200px;
   height: 50px;
   background: var(--main-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: "Roboto";
+  box-shadow: var(--box-shadow-submit);
   font-style: normal;
+  font-size: 14px;
   font-weight: 700;
+  line-height: 24px;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--white);
   transition-property: color, background-color;
 }
 
@@ -132,15 +136,15 @@ h3 {
 
 .list {
   display: flex;
-  list-style: none;
   flex-direction: row;
+  list-style: none;
   gap: 30px;
 }
 
 .contacts {
   color: var(--second-text-color);
-  font-style: normal;
   font-family: "Roboto";
+  font-style: normal;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
