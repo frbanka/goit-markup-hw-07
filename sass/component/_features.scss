@@ -1,27 +1,23 @@
 .features {
-  @include flex-nc;
-  @include flex-list;
+  @include flex-nc-list;
   max-width: 1170px;
   gap: 30px;
-}
-.features__title {
-  @include font($fs: 14px, $fw: 700, $lh: 16px);
-  padding: 0px 0px 10px 0px;
-
-  text-align: left;
-}
-.features__text {
-  @include font($fs: 14px, $lh: 24px, $ls: 0.03em);
-  color: var(--second-text-color);
-
-  max-width: 270px;
-}
-.features__item {
-  @include flex;
-  margin: 0px 0px 30px 0px;
-  height: 120px;
-  width: 270px;
-  border: none;
-  border-radius: 4px;
-  background-color: var(--background-color-light);
+  &__title {
+    @include font($fs: 14px, $fw: 700, $lh: 16px, $tal: left);
+    padding-bottom: 10px;
+  }
+  &__text {
+    @include font($fs: 14px, $lh: 24px, $ls: 0.03em, $tal: left);
+    color: var(--second-text-color);
+    max-width: 270px;
+  }
+  &__item {
+    @include flex;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 270px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--background-color-light);
+  }
 }

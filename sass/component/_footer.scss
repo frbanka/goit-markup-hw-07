@@ -1,100 +1,94 @@
-.address__place {
-  @include font($fss: normal, $fs: 14px, $lh: 24px, $ls: 0.03em);
-  font-family: var(--main-font);
-  color: var(--white);
-  margin: 9px 0px 9px 0px;
+.subscribe {
+  gap: 5px;
 }
-.address {
-  padding: 20px 0px 0px 0px;
-  line-height: 24px;
-}
-
 .footer {
-  padding: 60px 0px 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: auto;
   background: var(--background-color-dark);
   max-width: 1600px;
   height: 225px;
-}
-.footer__container {
-  @include flex-nc;
-  @include flex-row;
-  gap: 70px;
-}
-.footer__item {
-  @include flex-column;
-  @include flex-nc;
-}
-.footer__icons {
-  @include flex-nc;
-  @include flex-row;
-  gap: 10px;
-  padding: 20px 0px 0px 0px;
-}
-.footer__socials-title {
-  @include font($fss: normal, $fs: 14px, $fw: 700, $lh: 14px, $ls: 0.03em);
-  color: var(--white);
-  text-transform: uppercase;
-}
-.footer__mail {
-  text-decoration-line: underline;
-}
-.footer__social-icon {
-  fill: var(--icon-color-dark);
-  transition-property: fill;
-  transition: 250ms;
-}
-
-.footer__icon-social {
-  fill: var(--icon-color-dark);
-}
-
-.footer__icon-social:hover,
-.footer__icon-social:focus {
-  cursor: pointer;
-  fill: var(--main-color);
-  transition-property: fill;
-  transition: 250ms;
-  transition-timing-function: var(--transition-timing);
-}
-.footer__subscribe-label {
-  display: block;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  @include font($fss: normal, $fs: 14px, $fw: 700, $lh: 14px, $ls: 0.03em);
-  text-transform: uppercase;
-  color: var(--white);
-}
-.subscribe {
-  gap: 5px;
-}
-.footer__subscribe-form {
-  @include flex-nc;
-  @include flex-row;
-  gap: 12px;
-}
-.footer__input {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-right: 10px;
-  padding: 15px;
-  width: 360px;
-  height: 50px;
-  background-color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-.footer__input:focus {
-  border: 1px solid var(--main-color);
-  border-radius: 4px;
-  transition: 250ms;
-  transition-timing-function: var(--transition-timing);
-}
-.footer__button-items {
-  @include flex;
-  @include flex-row;
-  gap: 24px;
-  padding: 0px;
-  margin: 0px;
+  &__container {
+    @include flex-nc-row;
+    gap: 70px;
+  }
+  &__address {
+    padding-top: 20px;
+    line-height: 24px;
+    &--place {
+      @include font($fss: normal, $fs: 14px, $ls: 0.03em);
+      font-family: var(--main-font);
+      color: var(--white);
+    }
+  }
+  &__item {
+    @include flex-nc-column;
+  }
+  &__icons {
+    @include flex-nc-row;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  &__socials-title {
+    @include font(
+      $fss: normal,
+      $fs: 14px,
+      $fw: 700,
+      $lh: 14px,
+      $ls: 0.03em,
+      $tal: inherit,
+      $tt: uppercase
+    );
+    color: var(--white);
+  }
+  &__icon-social {
+    fill: var(--icon-color-dark);
+    @include transition(250ms, fill);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      fill: var(--main-color);
+      @include transition(250ms, fill);
+    }
+  }
+  &__subscribe-label {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    @include font(
+      $fss: normal,
+      $fs: 14px,
+      $fw: 700,
+      $lh: 14px,
+      $ls: 0.03em,
+      $tt: uppercase
+    );
+    color: var(--white);
+  }
+  &__subscribe-form {
+    @include flex-nc-row;
+    gap: 12px;
+  }
+  &__input {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 10px;
+    padding: 15px;
+    width: 360px;
+    height: 50px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    &:focus {
+      border: 1px solid var(--main-color);
+      border-radius: 4px;
+      @include transition(250ms, all);
+    }
+  }
+  &__button-items {
+    @include flex-rowflex;
+    gap: 24px;
+    padding: 0px;
+    margin: 0px;
+  }
 }

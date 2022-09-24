@@ -1,6 +1,7 @@
 @import "./variables/vars";
-@import "./basic/_mixin";
-@import "./basic/_common";
+@import "./basic/mixin";
+@import "./basic/common";
+@import "./basic/elements";
 @import "./component/header";
 @import "./component/footer";
 @import "./component/banner";

@@ -15,10 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
-    <div class="modal is-hidden" data-modal>
+    <div class="modal is-hidden" id="modal" data-modal>
       <div class="modal__window">
         <button class="modal__button-close" data-modal-close>
           <img src="./images/close.png" alt="close x" />
@@ -63,7 +63,7 @@
           <label class="modal__input-label"
             >Komentarz
             <textarea
-              class="modal__comment-area"
+              class="input modal__comment-area"
               name="feedback"
               rows="5"
               placeholder="Wprowadź tekst"
@@ -75,12 +75,12 @@
               name="regcheck"
               value="regcheck"
               unchecked
-              class="modal__false-checkmark"
+              class="false-checkmark"
               required
-            /><span class="modal__true-checkmark"></span>Oświadczam iż akceptuję
-            <a href="#" class="modal__reglink">Regulamin</a>i<a
+            /><span class="true-checkmark"></span>Oświadczam iż akceptuję
+            <a href="#" class="reglink">Regulamin</a>i<a
               href="#"
-              class="modal__reglink"
+              class="reglink"
               >Politykę Prywatności.</a
             >
           </label>
@@ -461,8 +461,8 @@
             <a class="logo" href="./index.html"
               ><span>Web</span><span class="logo--white">Studio</span></a
             >
-            <address class="address">
-              <span class="address__place"
+            <address class="footer__address">
+              <span class="footer__address--place"
                 >m. Warszawa, Aleje Jerozolimskie 21</span
               ><br />
               <span class="contacts">info@example.com</span><br />

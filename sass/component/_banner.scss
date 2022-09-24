@@ -9,10 +9,9 @@
   background-size: cover;
   width: 100%;
   height: 600px;
-}
-.banner__flex {
-  @include flex-column;
-  @include flex;
-  gap: 30px;
-  padding: 94px 0px 0px 0px;
+  &__flex {
+    @include flex-columnflex;
+    gap: 30px;
+    padding-top: 94px;
+  }
 }

@@ -2,102 +2,93 @@
   max-width: 1600px;
   padding: 94px 0px 94px 0px;
   margin: auto;
-}
-.portfolio__filter {
-  @include flex;
-  @include flex-list;
-  gap: 8px;
-  padding-bottom: 50px;
-}
-.portfolio__button {
-  padding: 0px 22px;
-  height: 38px;
-  @include font($fw: 500, $ls: 0.03em);
-  text-align: center;
-  background-color: var(--background-color-light);
-  color: var(--main-text-color);
-  transition-property: background-color;
-}
-.portfolio__button:hover,
-.portfolio__button:focus {
-  color: var(--white);
-  background-color: var(--main-color);
-  transition-property: background-color, color;
-  transition: 250ms;
-  transition-timing-function: var(--transition-timing);
-  box-shadow: var(--box-shadow-filter);
+  &__filter {
+    @include flex-listflex;
+    gap: 8px;
+    padding-bottom: 50px;
+  }
+  &__button {
+    padding: 0px 22px;
+    height: 38px;
+    @include font($fw: 500, $ls: 0.03em, $tal: center);
+    color: var(--main-text-color);
+    background-color: var(--background-color-light);
+    @include transition(250ms, color background-color);
+    &:hover,
+    &:focus {
+      box-shadow: var(--box-shadow-filter);
+      color: var(--white);
+      background-color: var(--main-color);
+      @include transition(250ms, color background-color);
+    }
+  }
 }
 .cards {
-  @include flex-nc;
-  @include flex-list;
-  @include flex-wrap;
+  @include flex-nc-wrap-list;
   height: 100%;
   column-gap: 30px;
   gap: 30px;
-}
-.cards__item {
-  position: relative;
-  max-width: fit-content;
-  flex-basis: calc(100% / 3);
-  border: 1px solid #eeeeee;
-  border-width: 0px 1px 1px 1px;
-}
-.cards__image {
-  position: relative;
-  width: 370px;
-  height: 400px;
-  overflow: hidden;
-}
-.cards__item:hover {
-  cursor: pointer;
-  box-shadow: var(--box-shadow-portfolio);
-  transition: box-shadow 250ms;
-  transition-timing-function: var(--transition-timing);
-}
-.cards__overlay {
-  position: absolute;
-  @include flex;
-  overflow: hidden;
-  visibility: hidden;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 370px;
-  height: 294px;
-  background: rgba(33, 150, 243, 0.9);
-  transform: translatey(100%);
-  transition-property: transform;
-  transition: 200ms ease;
-}
-.cards__overlay-text {
-  margin: 0px 0px 0px 24px;
-  color: var(--white);
-  font-family: var(--main-font);
-  @include font($fss: normal, $fw: 400, $fs: 18px, $lh: 28px, $ls: 0.03em);
-}
-.cards__item:hover .cards__image .cards__overlay {
-  transform: translatey(0);
-  transition-property: transform;
-  transition: 200ms ease;
-  cursor: pointer;
-  visibility: visible;
-}
-.cards__figcaption {
-  position: absolute;
-  height: 110px;
-  width: 370px;
-  bottom: 0;
-  z-index: 2;
-  background: var(--white);
-}
-
-.cards__title {
-  margin: 20px 24px 0px 24px;
-  color: var(--main-text-color);
-  @include font($fss: normal, $fw: 700, $fs: 18px, $lh: 36px, $ls: 0.06em);
-}
-.cards__description {
-  margin: 0px 24px 0px 24px;
-  color: var(--second-text-color);
-  @include font($fs: 16px, $lh: 30px, $ls: 0.03em);
+  &__item {
+    position: relative;
+    max-width: fit-content;
+    flex-basis: calc(100% / 3);
+    border: 1px solid var(--cards-color);
+    border-width: 0px 1px 1px 1px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--box-shadow-portfolio);
+      @include transition(250ms, box-shadow);
+    }
+    &:hover .cards__image .cards__overlay {
+      cursor: pointer;
+      visibility: visible;
+      transform: translatey(0);
+      @include transition(200ms, transform, ease);
+    }
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 400px;
+  }
+  &__overlay {
+    position: absolute;
+    @include flex;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition-property: transform;
+    transition: 200ms ease;
+    &-text {
+      margin: 0px 24px;
+      color: var(--white);
+      font-family: var(--main-font);
+      @include font($fss: normal, $fw: 400, $fs: 18px, $lh: 28px, $ls: 0.03em);
+    }
+  }
+  &__figcaption {
+    position: absolute;
+    height: 110px;
+    width: 370px;
+    bottom: 0;
+    z-index: 2;
+    background: var(--white);
+  }
+  &__title {
+    margin: 20px 24px 0px 24px;
+    color: var(--main-text-color);
+    @include font($fss: normal, $fw: 700, $fs: 18px, $lh: 36px, $ls: 0.06em);
+  }
+  &__description {
+    margin: 0px 24px 0px 24px;
+    color: var(--second-text-color);
+    @include font($fs: 16px, $lh: 30px, $ls: 0.03em);
+  }
 }
