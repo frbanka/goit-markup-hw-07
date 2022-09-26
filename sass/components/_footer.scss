@@ -43,12 +43,12 @@
   }
   &__icon-social {
     fill: var(--icon-color-dark);
-    @include transition(250ms, fill);
+    transition: 250ms, fill, var(--transition-timing);
     &:hover,
     &:focus {
       cursor: pointer;
       fill: var(--main-color);
-      @include transition(250ms, fill);
+      transition: 250ms, fill, var(--transition-timing);
     }
   }
   &__subscribe-label {
@@ -82,7 +82,7 @@
     &:focus {
       border: 1px solid var(--main-color);
       border-radius: 4px;
-      @include transition(250ms, all);
+      transition: 250ms, all, var(--transition-timing);
     }
   }
   &__button-items {

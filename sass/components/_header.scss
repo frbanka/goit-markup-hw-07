@@ -25,12 +25,12 @@
       &:focus .header__contacts-icons,
       &:hover .header__contacts-icons {
         fill: var(--main-color);
-        @include transition(250ms, fill);
+        transition: 250ms, fill, var(--transition-timing);
       }
       &:focus .contacts,
       &:hover .contacts {
         color: var(--main-color);
-        @include transition(250ms, fill);
+        transition: 250ms, fill, var(--transition-timing);
       }
     }
     &-icons {
@@ -52,11 +52,11 @@
   );
   color: var(--main-text-color);
   font-family: var(--main-font);
-  @include transition(250ms, color);
+  transition: 250ms, color, var(--transition-timing);
   &:hover,
   &:focus {
     color: var(--main-color);
-    @include transition(250ms, color);
+    transition: 250ms, color, var(--transition-timing);
   }
   &--current {
     color: var(--main-color);

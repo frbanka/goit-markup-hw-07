@@ -34,7 +34,7 @@
       cursor: pointer;
       background-color: var(--main-color);
       fill: var(--white);
-      @include transition(250ms, fill background-color);
+      transition: 250ms, fill background-color, var(--transition-timing);
     }
   }
 }

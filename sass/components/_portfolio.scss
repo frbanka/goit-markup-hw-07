@@ -13,13 +13,13 @@
     @include font($fw: 500, $ls: 0.03em, $tal: center);
     color: var(--main-text-color);
     background-color: var(--background-color-light);
-    @include transition(250ms, color background-color);
+    transition: 250ms, color background-color, var(--transition-timing);
     &:hover,
     &:focus {
       box-shadow: var(--box-shadow-filter);
       color: var(--white);
       background-color: var(--main-color);
-      @include transition(250ms, color background-color);
+      transition: 250ms, color background-color, var(--transition-timing);
     }
   }
 }
@@ -37,13 +37,13 @@
     &:hover {
       cursor: pointer;
       box-shadow: var(--box-shadow-portfolio);
-      @include transition(250ms, box-shadow);
+      transition: 250ms, box-shadow, var(--transition-timing);
     }
     &:hover .cards__image .cards__overlay {
       cursor: pointer;
       visibility: visible;
       transform: translatey(0);
-      @include transition(200ms, transform, ease);
+      transition: 200ms, transform, ease;
     }
   }
   &__image {
